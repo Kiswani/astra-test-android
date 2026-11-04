@@ -1,0 +1,2 @@
+-keep class dev.astratest.** { *; }
+-dontwarn okhttp3.**
