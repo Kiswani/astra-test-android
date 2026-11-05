@@ -1,0 +1,5 @@
+# JitPack builds this when someone asks for com.github.Kiswani:astra-test-android:<tag>.
+jdk:
+  - openjdk17
+install:
+  - ./gradlew :astratest:publishToMavenLocal -PVERSION_NAME=$VERSION
