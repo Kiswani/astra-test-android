@@ -45,7 +45,7 @@ internal object Sender {
     fun announceBuild(app: Application) {
         val key = AstraTest.key ?: return
         val v = Device.version(app) ?: return
-        post("/v1/builds", JSONObject().put("key", key).put("platform", "android").put("version", v).put("build", Device.build(app) ?: "")) {}
+        post("/v1/builds", JSONObject().put("key", key).put("platform", "android").put("version", v).put("build", Device.build(app) ?: "").put("sdk", "android").put("sdkVersion", AstraTest.VERSION)) {}
     }
 
     fun payload(description: String, picked: Picked?, screenshot: ByteArray?): JSONObject? {

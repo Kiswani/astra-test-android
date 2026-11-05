@@ -23,6 +23,9 @@ import java.util.WeakHashMap
  * A screenshot, recent requests, the app's log and device details are attached.
  */
 object AstraTest {
+    /** This SDK's version (set by sdks/publish.sh). */
+    const val VERSION = "0.1.1"
+
     data class Options(
         /** Your app's version; defaults to versionName. */
         val appVersion: String? = null,
